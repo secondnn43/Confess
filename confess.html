@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+     <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <div class="container">
+     <p id="question" class="tanong">Crush mo ko noh?</p>
+     <button class="yes" id="yes">Yes</button>
+     <button class="no" id="no">No</button>
+    </div>
+  </body>
+  <script>
+    const noBtn = document.getElementById("no");
+    const yesBtn = document.getElementById("yes");
+    const ques = document.getElementById("question");
+      noBtn.addEventListener("click", ()=>{
+        let rand = Math.floor(Math.random() * (-90 -50)+1);
+        let rand2 = Math.floor(Math.random() * (-50 -30)+1);
+        noBtn.style.transform = "translate("+rand+"px,"+rand2+"px)";
+       })
+      yesBtn.addEventListener("click", ()=>{
+          ques.innerHTML = "crush din kita <3"
+      })
+      
+  </script>
+  
+</html>
